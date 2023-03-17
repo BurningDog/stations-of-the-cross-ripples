@@ -1,0 +1,52 @@
+&nbsp;<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stations of the Cross Ripples</title>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        color: #fff;
+        font-size: 16px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-image: url(https://i.postimg.cc/XvT12qdD/3.jpg);
+        background-size: cover;
+        background-position: 50% 0;
+        height: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      /* body:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      } */
+      /* section {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 100px;
+        max-width: 500px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      } */
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.js"></script>
+    <script>
+      $("body").ripples({
+        resolution: 512,
+        dropRadius: 20,
+        perturbance: 0.04,
+      });
+    </script>
+  </head>
+  <body>
+    <section>&nbsp;</section>
+  </body>
+</html>
