@@ -1,4 +1,4 @@
-&nbsp;<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,40 +13,95 @@
         color: #fff;
         font-size: 16px;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        background-image: url(https://i.postimg.cc/XvT12qdD/3.jpg);
-        background-size: cover;
-        background-position: 50% 0;
         height: 100%;
         text-align: center;
         margin: 0;
         padding: 0;
       }
-      /* body:before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
+      .slideshowContainer {
+        position: relative;
+        width: 100%;
         height: 100%;
-      } */
-      /* section {
-        display: inline-block;
-        vertical-align: middle;
-        padding: 100px;
-        max-width: 500px;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-      } */
+        overflow: hidden;
+      }
+      .image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+      }
+      .image1 {
+        background-image: url(img/the-hand-of-god-infinity-aluminum-masterwork-edition-38-x-60-metal-print-with-hanging-aparatus-canvas-692_1024x1024@2x.jpg);
+      }
+      .image2 {
+        background-image: url(img/white-jesus.jpg);
+        background-size: contain;
+        background-color: #133155;
+      }
+      section {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.js"></script>
     <script>
-      $("body").ripples({
-        resolution: 512,
-        dropRadius: 20,
-        perturbance: 0.04,
+      // See https://www.jqueryscript.net/animation/jQuery-Plugin-For-Water-Ripple-Animation-ripples.html
+      $(document).ready(function(){
+        $(".image1").ripples({
+          resolution: 512,
+          dropRadius: 20,
+          perturbance: 0.04,
+        });
+        $(".image2").ripples({
+          resolution: 512,
+          dropRadius: 20,
+          perturbance: 0.04,
+        });
+
+        $('.slideshow2').hide();
+
+        var x = 0;
+
+        setInterval(function () {
+          if (x == 0) {
+            $('.slideshow1').hide();
+            $('.slideshow2').show();
+            x = 1;
+          } else {
+            $('.slideshow2').hide();
+            $('.slideshow1').show();
+            x = 0;
+          }
+        }, 30000);
       });
     </script>
   </head>
   <body>
-    <section>&nbsp;</section>
+    <section>
+      <div class="slideshowContainer">
+        <ul class="slideshow slideshow1">
+          <li><div class="image image1">&nbsp;</div></li>
+        </ul>
+        <ul class="slideshow slideshow2">
+          <li><div class="image image2">&nbsp;</div></li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>
